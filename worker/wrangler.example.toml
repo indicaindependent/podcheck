@@ -1,0 +1,16 @@
+name = "podcheck-api"
+main = "podcheck-api.js"
+compatibility_date = "2026-09-01"
+
+# Bindings the worker expects (names must match exactly):
+[ai]
+binding = "AI"                      # Workers AI - vision OCR of the compliance panel
+
+[[d1_databases]]
+binding = "DB"                      # apply schema.sql to this database first
+database_name = "podcheck-db"
+database_id = "YOUR-D1-DATABASE-ID"
+
+[[r2_buckets]]
+binding = "EVIDENCE"                # metadata-stripped evidence photos, consent-gated
+bucket_name = "podcheck-evidence"

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 392" width="1200" height="392" role="img" aria-labelledby="trs drs" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+<title id="trs">Three distinct rejection shapes, mapped to three different outcomes</title>
+<desc id="drs">The state short-link service rejects in three distinguishable shapes and PodCheck maps each to a different outcome instead of collapsing them into one failure. HTTP 500 carrying Invalid signet ID becomes not a state registry code; this shape was confirmed live against the real service on 2026-09-07. HTTP 404 carrying Code not issued with a batch id and index becomes a real package tag whose unit number was never issued. HTTP 404 carrying not found becomes an unknown package.</desc>
+<rect width="1200" height="392" fill="#0B1015"/>
+<text x="64" y="50" fill="#F3F7F9" font-size="25" font-weight="600">Why three &#8220;no&#8221;s are not one &#8220;no&#8221;</text>
+<text x="64" y="80" fill="#A7B6C2" font-size="15">Collapsing these would throw away the only diagnostic the user has.</text>
+<rect x="64" y="116" width="1072" height="70" rx="8" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
+<rect x="84" y="135" width="72" height="32" rx="6" fill="#1E2833" stroke="#F5A524" stroke-width="1.5"/>
+<text x="120" y="157" fill="#F5A524" font-size="16.5" font-weight="600" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">500</text>
+<text x="176" y="148" fill="#F3F7F9" font-size="14.5" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">Invalid signet ID</text>
+<text x="176" y="170" fill="#A7B6C2" font-size="12.5">confirmed live against the service 2026-09-07</text>
+<line x1="700" y1="151" x2="754" y2="151" stroke="#A7B6C2" stroke-width="2.5" marker-end="url(#ar)"/>
+<text x="1116" y="157" fill="#F5A524" font-size="15.5" font-weight="600" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">not_state_registry</text>
+<rect x="64" y="196" width="1072" height="70" rx="8" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
+<rect x="84" y="215" width="72" height="32" rx="6" fill="#1E2833" stroke="#FB7185" stroke-width="1.5"/>
+<text x="120" y="237" fill="#FB7185" font-size="16.5" font-weight="600" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">404</text>
+<text x="176" y="228" fill="#F3F7F9" font-size="14.5" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">Code not issued  (+ batchId, index)</text>
+<text x="176" y="250" fill="#A7B6C2" font-size="12.5">documented in source</text>
+<line x1="700" y1="231" x2="754" y2="231" stroke="#A7B6C2" stroke-width="2.5" marker-end="url(#ar)"/>
+<text x="1116" y="237" fill="#FB7185" font-size="15.5" font-weight="600" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">unit_not_issued</text>
+<rect x="64" y="276" width="1072" height="70" rx="8" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
+<rect x="84" y="295" width="72" height="32" rx="6" fill="#1E2833" stroke="#FB7185" stroke-width="1.5"/>
+<text x="120" y="317" fill="#FB7185" font-size="16.5" font-weight="600" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">404</text>
+<text x="176" y="308" fill="#F3F7F9" font-size="14.5" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">not found</text>
+<text x="176" y="330" fill="#A7B6C2" font-size="12.5">documented in source</text>
+<line x1="700" y1="311" x2="754" y2="311" stroke="#A7B6C2" stroke-width="2.5" marker-end="url(#ar)"/>
+<text x="1116" y="317" fill="#FB7185" font-size="15.5" font-weight="600" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">package_unknown</text>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#A7B6C2" stroke="#A7B6C2" stroke-width="1"/></marker></defs>
+</svg>

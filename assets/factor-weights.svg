@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-labelledby="tfw dfw" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+<title id="tfw">PodCheck scoring: nine factors, weights summing to 100</title>
+<desc id="dfw">A horizontal bar chart of the nine factors PodCheck scores, sorted by weight. Code destination, the state track-and-trace registry lookup, carries the largest weight at 35 of 100. Compliance label OCR and inside-of-the-pouch carry 12 each. Barcode and catalog checks carry 10 each. Sticker position carries 8, pouch artwork 5, seller licence 4 and purchase context 4. The weights total exactly 100. Colour encodes where each factor's evidence comes from. Three factors apply to pouch products only and are excluded from the denominator, never scored zero, when the product is not a pouch. Four hard signals cap the total score regardless of the other factors.</desc>
+<rect width="1200" height="620" fill="#0B1015"/>
+<text x="64" y="52" fill="#F3F7F9" font-size="25" font-weight="600">Nine factors, weight 100</text>
+<text x="64" y="82" fill="#A7B6C2" font-size="15">No model judges the photos. Every factor is a registry lookup, a text match against published data, or an answer the user gives.</text>
+<text x="436" y="139" fill="#F3F7F9" font-size="15" text-anchor="end">Code destination (state registry QR)</text>
+<rect x="452" y="118" width="560" height="28" rx="4" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
+<rect x="452" y="118" width="560" height="28" rx="4" fill="#2DD4E8" stroke="#2DD4E8" stroke-width="1.5"/>
+<text x="1024" y="139" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">35</text>
+<text x="436" y="177" fill="#F3F7F9" font-size="15" text-anchor="end">Compliance label text (OCR)</text>
+<rect x="452" y="156" width="560" height="28" rx="4" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
+<rect x="452" y="156" width="192" height="28" rx="4" fill="#E87BC8" stroke="#E87BC8" stroke-width="1.5"/>
+<text x="656" y="177" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">12</text>
+<text x="436" y="215" fill="#F3F7F9" font-size="15" text-anchor="end">Inside of the pouch</text>
+<rect x="452" y="194" width="560" height="28" rx="4" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
+<rect x="452" y="194" width="192" height="28" rx="4" fill="#F5A524" stroke="#F5A524" stroke-width="1.5"/>
+<text x="656" y="215" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">12</text>
+<text x="686" y="215" fill="#A7B6C2" font-size="12">pouch only</text>
+<text x="436" y="253" fill="#F3F7F9" font-size="15" text-anchor="end">Barcode vs 323 published UPCs</text>
+<rect x="452" y="232" width="560" height="28" rx="4" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
+<rect x="452" y="232" width="160" height="28" rx="4" fill="#A78BFA" stroke="#A78BFA" stroke-width="1.5"/>
+<text x="624" y="253" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">10</text>
+<text x="436" y="291" fill="#F3F7F9" font-size="15" text-anchor="end">Flavor / descriptors / size vs catalog</text>
+<rect x="452" y="270" width="560" height="28" rx="4" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
+<rect x="452" y="270" width="160" height="28" rx="4" fill="#A78BFA" stroke="#A78BFA" stroke-width="1.5"/>
+<text x="624" y="291" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">10</text>
+<text x="436" y="329" fill="#F3F7F9" font-size="15" text-anchor="end">Compliance sticker position</text>
+<rect x="452" y="308" width="560" height="28" rx="4" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
+<rect x="452" y="308" width="128" height="28" rx="4" fill="#F5A524" stroke="#F5A524" stroke-width="1.5"/>
+<text x="592" y="329" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">8</text>
+<text x="622" y="329" fill="#A7B6C2" font-size="12">pouch only</text>
+<text x="436" y="367" fill="#F3F7F9" font-size="15" text-anchor="end">Pouch artwork vs device inside</text>
+<rect x="452" y="346" width="560" height="28" rx="4" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
+<rect x="452" y="346" width="80" height="28" rx="4" fill="#A78BFA" stroke="#A78BFA" stroke-width="1.5"/>
+<text x="544" y="367" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">5</text>
+<text x="574" y="367" fill="#A7B6C2" font-size="12">pouch only</text>
+<text x="436" y="405" fill="#F3F7F9" font-size="15" text-anchor="end">Seller licence (CA DCC live search)</text>
+<rect x="452" y="384" width="560" height="28" rx="4" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
+<rect x="452" y="384" width="64" height="28" rx="4" fill="#4ADE80" stroke="#4ADE80" stroke-width="1.5"/>
+<text x="528" y="405" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">4</text>
+<text x="436" y="443" fill="#F3F7F9" font-size="15" text-anchor="end">Purchase context</text>
+<rect x="452" y="422" width="560" height="28" rx="4" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
+<rect x="452" y="422" width="64" height="28" rx="4" fill="#F5A524" stroke="#F5A524" stroke-width="1.5"/>
+<text x="528" y="443" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">4</text>
+<line x1="64" y1="466" x2="1136" y2="466" stroke="#A7B6C2" stroke-width="1"/>
+<text x="452" y="492" fill="#F3F7F9" font-size="16" font-weight="600" text-anchor="end">TOTAL</text>
+<text x="468" y="492" fill="#4ADE80" font-size="16" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">100</text>
+<rect x="64" y="516" width="13" height="13" rx="3" fill="#2DD4E8" stroke="#2DD4E8" stroke-width="1"/>
+<text x="84" y="527" fill="#A7B6C2" font-size="13">state track-and-trace registry</text>
+<rect x="297" y="516" width="13" height="13" rx="3" fill="#A78BFA" stroke="#A78BFA" stroke-width="1"/>
+<text x="317" y="527" fill="#A7B6C2" font-size="13">turn's own published data</text>
+<rect x="495" y="516" width="13" height="13" rx="3" fill="#F5A524" stroke="#F5A524" stroke-width="1"/>
+<text x="515" y="527" fill="#A7B6C2" font-size="13">answer the user gives</text>
+<rect x="665" y="516" width="13" height="13" rx="3" fill="#E87BC8" stroke="#E87BC8" stroke-width="1"/>
+<text x="685" y="527" fill="#A7B6C2" font-size="13">OCR of the label photo</text>
+<rect x="842" y="516" width="13" height="13" rx="3" fill="#4ADE80" stroke="#4ADE80" stroke-width="1"/>
+<text x="862" y="527" fill="#A7B6C2" font-size="13">public licence search</text>
+<rect x="64" y="550" width="1072" height="76" rx="8" fill="#1E2833" stroke="#F5A524" stroke-width="2"/>
+<text x="86" y="576" fill="#F5A524" font-size="14" font-weight="600">HARD SIGNALS CAP THE SCORE</text>
+<text x="86" y="600" fill="#F3F7F9" font-size="13.5">Plain foil inside the pouch -&gt; 40   Sticker on the front -&gt; 44   Barcode belongs to another flavor -&gt; 30   Artwork shows the wrong device -&gt; 44</text>
+<text x="86" y="618" fill="#A7B6C2" font-size="12.5">Factors that cannot apply to a product are excluded from the denominator, never scored zero.</text>
+</svg>

@@ -1,0 +1,54 @@
+/* VibeMaestro canonical design tokens + base (baked into build image).
+   Link FIRST in <head>. Provides the full :root token system, base reset,
+   typography, focus rings, transitions, and a reusable .toast. Component CSS
+   goes in styles.css and should reference these vars. NEVER redefine :root here. */
+:root {
+  --bg: #0b0d10; --surface: #14171c; --surface-2: #1c2027;
+  --border: rgba(255,255,255,.08); --border-strong: rgba(255,255,255,.14);
+  --text: #f4f6f8; --muted: #9aa4b2; --primary: #f4b640; --primary-ink: #1a1205;
+  --accent: #7c6cff; --success: #37d67a; --warn: #ffb020; --danger: #ff5470;
+  --fs-xs:.75rem; --fs-sm:.875rem; --fs-md:1rem; --fs-lg:1.25rem; --fs-xl:1.75rem; --fs-2xl:2.5rem; --fs-3xl:3.25rem;
+  --font-display: 'Inter','Segoe UI',system-ui,sans-serif; --font-body: 'Inter','Segoe UI',system-ui,sans-serif;
+  --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-6:24px; --sp-8:32px; --sp-12:48px;
+  --r-sm:6px; --r-md:12px; --r-lg:20px; --r-full:999px;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.25); --shadow-md:0 6px 24px rgba(0,0,0,.32); --shadow-glow:0 0 16px rgba(244,182,64,.28);
+  --ease:cubic-bezier(.2,.8,.2,1); --dur:.18s;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  font-family: var(--font-body); background: var(--bg); color: var(--text);
+  font-size: var(--fs-md); line-height: 1.5; -webkit-font-smoothing: antialiased; padding: var(--sp-6);
+}
+h1,h2,h3 { font-family: var(--font-display); line-height: 1.15; margin: 0 0 var(--sp-4); }
+h1 { font-size: var(--fs-2xl); } h2 { font-size: var(--fs-xl); } h3 { font-size: var(--fs-lg); }
+a { color: var(--primary); }
+button, .btn {
+  font: inherit; cursor: pointer; border: 1px solid var(--border); background: var(--surface-2);
+  color: var(--text); border-radius: var(--r-md); padding: var(--sp-2) var(--sp-4);
+  transition: background var(--dur) var(--ease), transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+button:hover, .btn:hover { background: var(--surface); transform: translateY(-1px); }
+button:active, .btn:active { transform: translateY(0); }
+button.primary, .btn-primary { background: var(--primary); color: var(--primary-ink); border-color: transparent; font-weight: 600; }
+button.primary:hover, .btn-primary:hover { box-shadow: var(--shadow-glow); }
+:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+input, select, textarea {
+  font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r-sm); padding: var(--sp-2) var(--sp-3); transition: border-color var(--dur) var(--ease);
+}
+input:focus, select:focus, textarea:focus { border-color: var(--primary); outline: none; }
+.card, .panel {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg);
+  padding: var(--sp-6); box-shadow: var(--shadow-sm); transition: box-shadow var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+.card:hover { box-shadow: var(--shadow-md); }
+#toast, .toast {
+  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px);
+  background: var(--surface-2); color: var(--text); border: 1px solid var(--border-strong);
+  padding: var(--sp-3) var(--sp-4); border-radius: var(--r-md); box-shadow: var(--shadow-md);
+  opacity: 0; pointer-events: none; transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease); z-index: 9999;
+}
+#toast.show, .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+.toast.success { border-color: var(--success); } .toast.error { border-color: var(--danger); }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }

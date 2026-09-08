@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!--vm-assets-->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <meta property="og:title" content="PodCheck — Independent pre-screen for turn packaging">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PodCheck — Independent pre-screen for turn packaging">
+  <meta name="twitter:image" content="og-card.png">
+  <!--/vm-assets-->
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="mobile-web-app-capable" content="yes">
+<title>PodCheck — Independent pre-screen for turn pods and all-in-ones</title>
+<meta name="description" content="Independent pre-screen for turn brand vape packaging: pods and all-in-ones. State registry scan in New York and California; turn's own packaging checks in NY, CA, AZ, FL and online. Not affiliated with turn. 21+.">
+<meta name="theme-color" content="#0b0d10">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b0d10'/%3E%3Cpath d='M50 20 L75 32 V52 C75 68 63 80 50 85 C37 80 25 68 25 52 V32 Z' fill='none' stroke='%2337d67a' stroke-width='5'/%3E%3Cpolyline points='40,52 47,60 62,42' fill='none' stroke='%2337d67a' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="age-gate" class="age-gate" role="dialog" aria-modal="true" aria-labelledby="age-gate-title">
+  <div class="age-gate-card">
+    <div class="age-gate-body">
+      <span class="age-gate-icon" aria-hidden="true"><svg class="ic" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+      <h1 id="age-gate-title">Are you 21 or older?</h1>
+      <p class="muted">PodCheck is an independent pre-screening tool for adult cannabis consumers in legal state markets. The registry lookup covers New York and California; turn's own packaging checks work for every pod and all-in-one turn sells.</p>
+      <div class="age-gate-actions">
+        <button id="age-yes" class="btn primary big-tap">Yes, I'm 21+</button>
+        <button id="age-no" class="btn big-tap">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="app-shell">
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="top-banner" role="note">Independent pre-screen. Not affiliated with turn. 21+.</div>
+
+  <header class="app-header">
+    <a href="#home" class="brand" aria-label="PodCheck home">
+      <span class="brand-mark" aria-hidden="true"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+      <span>PodCheck</span>
+      <span class="brand-ver" id="brand-ver" aria-label="engine version"></span>
+    </a>
+    <nav class="top-nav" aria-label="Primary">
+      <a href="#scan" data-route="scan">Scan</a>
+      <a href="#check" data-route="check">Check</a>
+      <a href="#stats" data-route="stats">Stats</a>
+      <a href="#about" data-route="about">About</a>
+    </nav>
+  </header>
+
+  <main id="view">
+
+    <!-- HOME -->
+    <section id="screen-home" class="screen">
+      <div class="hero">
+        <p class="state-label" role="note"><span class="state-pill">NY</span><span class="state-pill">CA</span><span class="state-label-text">registry scan</span><span class="state-pill ghost">AZ</span><span class="state-pill ghost">FL</span><span class="state-pill ghost">online</span><span class="state-label-text">turn's own checks</span></p>
+        <h1>Scan the code. Ask the <span class="accent">state</span>, not the package.</h1>
+        <p class="lead">Every legal unit in New York and California carries a state track-and-trace QR code. We read it and look the unit up in the state registry - product, lab results, licence, recalls - in one scan. No code, or bought in Arizona, Florida or online? Run the same checks turn's own team uses, for pods and all-in-ones alike.</p>
+
+        <div class="live-strip" id="live-strip" aria-live="polite">
+          <div class="live-cell"><span class="live-num" data-count="198" id="live-products">—</span><span class="live-k">turn products in the catalog</span></div>
+          <div class="live-cell"><span class="live-num" data-count="323" id="live-upcs">—</span><span class="live-k">barcodes from turn's asset hub</span></div>
+          <div class="live-cell"><span class="live-num">4<small>+</small></span><span class="live-k">states, plus turn's online hemp line</span></div>
+          <div class="live-cell"><span class="live-num">0</span><span class="live-k">guesses - every factor is a lookup</span></div>
+        </div>
+
+        <div class="cta-stack">
+          <a href="#scan" class="btn primary big-tap block" id="btn-start-scan"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V6a2 2 0 0 1 2-2h2"/><path d="M16 4h2a2 2 0 0 1 2 2v2"/><path d="M20 16v2a2 2 0 0 1-2 2h-2"/><path d="M8 20H6a2 2 0 0 1-2-2v-2"/><path d="M4 12h16"/></svg> Scan the code</a>
+          <a href="#check" class="btn big-tap block" id="btn-start-check"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11"/><path d="M9 12h11"/><path d="M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg> No code? Run turn's checks</a>
+        </div>
+
+        <ol class="steps">
+          <li class="step-card"><span class="step-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V6a2 2 0 0 1 2-2h2"/><path d="M16 4h2a2 2 0 0 1 2 2v2"/><path d="M20 16v2a2 2 0 0 1-2 2h-2"/><path d="M8 20H6a2 2 0 0 1-2-2v-2"/><path d="M4 12h16"/></svg></span><div><strong>Point the camera at the QR</strong><p>Small codes are fine - we zoom and light the frame for you.</p></div></li>
+          <li class="step-card"><span class="step-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14"/><path d="M15 6v14"/></svg></span><div><strong>The state answers</strong><p>Registered? You see exactly what the registry says is inside, and can log it.</p></div></li>
+          <li class="step-card"><span class="step-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><div><strong>No code? turn's own tells</strong><p>Inside foil, sticker, pouch artwork, barcode, size and flavor - checked against turn's own published catalog.</p></div></li>
+        </ol>
+
+        <h2 class="h-sec">Every turn product, the right checks</h2>
+        <p class="muted small">Measured from turn's official asset hub, not assumed. A check that does not apply to a product is left out of its score - never counted against it.</p>
+        <div class="cov-wrap" role="region" aria-label="Which checks apply to which product" tabindex="0"><table class="cov">
+<thead><tr><th scope="col">Product</th><th scope="col">Registry QR</th><th scope="col">Inside foil</th><th scope="col">Sticker</th><th scope="col">Artwork</th><th scope="col">Barcode</th><th scope="col">Size</th><th scope="col">Catalog</th></tr></thead>
+<tbody><tr><th scope="row"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="5" width="8" height="15" rx="2.5"/><path d="M10 5V3.5h4V5"/><path d="M8 12h8"/></svg><span>Pod (pouch)</span></th><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td></tr><tr><th scope="row"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9.5" y="2.5" width="5" height="19" rx="2.5"/><circle cx="12" cy="7" r="1"/><path d="M12 18v1"/></svg><span>All-in-one (pouch)</span></th><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td></tr><tr><th scope="row"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="7" width="16" height="13" rx="3"/><path d="M4 11h16"/><path d="M8 7V5.5a1.5 1.5 0 0 1 1.5-1.5h5A1.5 1.5 0 0 1 16 5.5V7"/></svg><span>Live-resin tin (NY)</span></th><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-no"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12h12"/></svg><span class="visually-hidden">not applicable</span></span></td><td><span class="cov-no"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12h12"/></svg><span class="visually-hidden">not applicable</span></span></td><td><span class="cov-no"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12h12"/></svg><span class="visually-hidden">not applicable</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td></tr><tr><th scope="row"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="3"/><circle cx="12" cy="9" r="1.5"/><path d="M10 16h4"/></svg><span>turn one</span></th><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-no"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12h12"/></svg><span class="visually-hidden">not applicable</span></span></td><td><span class="cov-no"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12h12"/></svg><span class="visually-hidden">not applicable</span></span></td><td><span class="cov-no"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12h12"/></svg><span class="visually-hidden">not applicable</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-no"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12h12"/></svg><span class="visually-hidden">not applicable</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td></tr><tr><th scope="row"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-5-3-8-7-8-12 0 0 4 0 8 3 4-3 8-3 8-3 0 5-3 9-8 12z"/><path d="M12 12v9"/></svg><span>Hemp line (online)</span></th><td><span class="cov-no"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12h12"/></svg><span class="visually-hidden">not applicable</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-no"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12h12"/></svg><span class="visually-hidden">not applicable</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td></tr></tbody></table></div>
+
+        <div class="home-secondary-links">
+          <a href="#stats">Stats</a><span class="dot">&middot;</span><a href="#about">About &amp; privacy</a>
+        </div>
+        <div class="home-links"></div>
+      </div>
+    </section>
+
+    <!-- SCAN -->
+    <section id="screen-scan" class="screen">
+      <h1>Scan the code</h1>
+      <p class="muted" id="scan-hint">Fill the frame with the QR code. Small codes: move closer and hold still - we zoom in for you.</p>
+      <div id="scan-stage" class="scan-stage">
+        <video id="scan-video" playsinline muted autoplay></video>
+        <div class="scan-reticle" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="scan-controls">
+          <button class="btn small" id="scan-torch" type="button" hidden>Light</button>
+          <input type="range" id="scan-zoom" min="1" max="1" step="0.1" value="1" hidden aria-label="Zoom">
+        </div>
+      </div>
+      <div id="scan-status" class="scan-status">Starting camera...</div>
+      <div id="scan-engine" class="muted small scan-engine">Decoder: checking...</div>
+      <div class="scan-alt card">
+        <label class="btn big-tap block" for="scan-file">Take a photo of the code instead</label>
+        <input type="file" id="scan-file" accept="image/*" capture="environment" hidden>
+        <div class="field">
+          <label for="scan-manual">Or paste the link the code opens</label>
+          <div class="field-row">
+            <input type="text" id="scan-manual" placeholder="https://app.1a4.com/landingpage/...">
+            <button class="btn" id="scan-manual-go" type="button">Look up</button>
+          </div>
+        </div>
+      </div>
+      <div id="scan-result" class="scan-result"></div>
+    </section>
+
+    <!-- CHECK -->
+    <section id="screen-check" class="screen">
+      <h1>Check a package</h1>
+      <div id="check-registry-note"></div>
+      <p class="muted">Answer turn's own packaging checks, add photos, or paste a code. Photos stay on this device unless you build a report.</p>
+
+      <nav class="stepper" aria-label="Form sections"><a href="#sec-product" data-step="sec-product">Product</a><a href="#sec-pouch" data-step="sec-pouch">Pouch</a><a href="#sec-label" data-step="sec-label">Label</a><a href="#sec-photos" data-step="sec-photos">Photos</a><a href="#sec-seller" data-step="sec-seller">Seller</a></nav>
+
+      <div class="card sec" id="sec-product">
+        <h2><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12l-8 8-9-9V4h7l10 8z"/><circle cx="8" cy="8" r="1"/></svg> turn's own checks</h2>
+        <p class="muted small">What turn's own team asks to see when someone posts "is this real?", plus what turn's official asset hub says about every pod and all-in-one it sells in NY, CA, AZ, FL and online. No model, no guesswork.</p>
+        <div class="field">
+          <span class="field-label" id="lbl-device">Which turn product is it?</span>
+          <div class="tiles" role="radiogroup" aria-labelledby="lbl-device" id="device-tiles"><button type="button" class="tile" data-device="podpak" role="radio" aria-checked="false"><svg class="ic" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="5" width="8" height="15" rx="2.5"/><path d="M10 5V3.5h4V5"/><path d="M8 12h8"/></svg><span class="tile-t">Pod</span><span class="tile-s">pouch, for the podpak battery</span></button><button type="button" class="tile" data-device="disposable" role="radio" aria-checked="false"><svg class="ic" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9.5" y="2.5" width="5" height="19" rx="2.5"/><circle cx="12" cy="7" r="1"/><path d="M12 18v1"/></svg><span class="tile-t">All-in-one</span><span class="tile-s">disposable pen, pouch</span></button><button type="button" class="tile" data-device="disposable_tin" role="radio" aria-checked="false"><svg class="ic" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="7" width="16" height="13" rx="3"/><path d="M4 11h16"/><path d="M8 7V5.5a1.5 1.5 0 0 1 1.5-1.5h5A1.5 1.5 0 0 1 16 5.5V7"/></svg><span class="tile-t">Live-resin tin</span><span class="tile-s">NY 100% live resin all-in-one</span></button><button type="button" class="tile" data-device="turnone" role="radio" aria-checked="false"><svg class="ic" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="3"/><circle cx="12" cy="9" r="1.5"/><path d="M10 16h4"/></svg><span class="tile-t">turn one</span><span class="tile-s">pen and pod system</span></button><button type="button" class="tile" data-device="hemp_podpak" role="radio" aria-checked="false"><svg class="ic" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-5-3-8-7-8-12 0 0 4 0 8 3 4-3 8-3 8-3 0 5-3 9-8 12z"/><path d="M12 12v9"/></svg><span class="tile-t">Hemp pod</span><span class="tile-s">THCa / THCp, bought online</span></button><button type="button" class="tile" data-device="hemp_disposable" role="radio" aria-checked="false"><svg class="ic" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9.5" y="2.5" width="5" height="19" rx="2.5"/><circle cx="12" cy="7" r="1"/><path d="M12 18v1"/></svg><span class="tile-t">Hemp all-in-one</span><span class="tile-s">THCa / THCp, bought online</span></button></div>
+          <select id="check-device" class="visually-hidden-select" aria-label="Which turn product is it?">
+          <option value="" selected>Not sure</option>
+          <option value="podpak">Pod (for the podpak battery) - pouch</option>
+          <option value="disposable">All-in-one / disposable pen - pouch</option>
+          <option value="disposable_tin">All-in-one 100% live resin - tin (NY)</option>
+          <option value="turnone">turn one</option>
+          <option value="hemp_podpak">Hemp (THCa / THCp) pod - bought online</option>
+          <option value="hemp_disposable">Hemp (THCa / THCp) all-in-one - bought online</option>
+        </select>
+        </div>
+        <div class="field-row">
+          <div class="field"><span class="field-label">Where was it sold?</span><select id="check-state" data-seg="chips" aria-label="Where was it sold?">
+            <option value="" selected>Not sure</option>
+            <option value="NY">New York</option>
+            <option value="CA">California</option>
+            <option value="AZ">Arizona</option>
+            <option value="FL">Florida</option>
+            <option value="HEMP">Online (hemp line)</option>
+          </select></div>
+          <div class="field"><span class="field-label">Size printed on it</span><select id="check-size" data-seg="chips" aria-label="Size printed on it">
+            <option value="" selected>Not shown</option>
+            <option value="0.5g">0.5g</option>
+            <option value="1.0g">1.0g / 1.0ml</option>
+            <option value="2.0g">2.0g</option>
+          </select></div>
+        </div>
+        <div class="field">
+          <label for="check-upc"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6v12"/><path d="M8 6v12"/><path d="M11 6v12"/><path d="M15 6v12"/><path d="M18 6v12"/><path d="M20 6v12"/></svg> Number under the barcode <span class="muted small">(12 digits)</span></label>
+          <input id="check-upc" type="text" inputmode="numeric" autocomplete="off" placeholder="e.g. 850047120144" maxlength="18">
+          <p class="hint">Looked up against the 323 barcodes turn publishes for its own products.</p>
+        </div>
+      </div>
+
+      <div class="card sec" id="sec-pouch">
+        <h2><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg> The pouch</h2>
+        <p id="pod-only-note" class="note-skip" hidden>The pouch checks are skipped for this product: it does not ship in the turn pouch (the NY live resin all-in-one comes in a tin, and turn one packaging is not in turn's asset hub yet). They do not count against it. The registry scan, barcode and catalog checks still apply.</p>
+        <div id="pod-only-checks">
+          <div class="field"><span class="field-label">What is drawn in the pouch window?</span><select id="check-window" data-seg="cards" aria-label="What is drawn in the pouch window?">
+          <option value="" selected>Not sure</option>
+          <option value="pod">A pod, with "pen sold separately" down the side</option>
+          <option value="pen">A pen (all-in-one)</option>
+        </select></div>
+          <div class="field"><span class="field-label">Open the pouch. What is on the inside foil?</span><select id="check-inside" data-seg="cards" aria-label="Inside foil">
+          <option value="" selected>Haven't opened it</option>
+          <option value="monogram">The turn logo pattern printed on the inside</option>
+          <option value="plain">Plain silver foil, no pattern</option>
+        </select></div>
+          <div class="field"><span class="field-label">Where is the state compliance sticker?</span><select id="check-sticker" data-seg="cards" aria-label="Sticker position">
+          <option value="" selected>Not sure</option>
+          <option value="back">On the back label or top-left</option>
+          <option value="front">On the front of the pouch</option>
+          <option value="none">There is no sticker</option>
+        </select></div>
+        </div>
+      </div>
+
+      <div class="card sec" id="sec-label">
+        <h2><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/></svg> The label</h2>
+        <div class="field">
+          <label for="seller-product">Flavor name exactly as printed</label>
+          <input type="text" id="seller-product" placeholder="e.g. dragon fruit açaí" autocapitalize="none">
+        </div>
+        <div class="field">
+          <label for="check-tags">The three short lines under it <span class="muted small">(comma-separated)</span></label>
+          <input type="text" id="check-tags" placeholder="e.g. jungle blend, decompressed, in the clouds" autocapitalize="none">
+          <p class="hint">turn's three dots: taste, feeling, memory - each flavor has its own three.</p>
+        </div>
+        <div class="field"><span class="field-label">up or down?</span><select id="check-effect" data-seg="chips" aria-label="up or down">
+            <option value="" selected>Not shown</option>
+            <option value="up">up (sativa / s-hybrid)</option>
+            <option value="down">down (indica / i-hybrid)</option>
+          </select></div>
+      </div>
+
+      <div class="card sec" id="sec-photos">
+        <h2><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V6a2 2 0 0 1 2-2h2"/><path d="M16 4h2a2 2 0 0 1 2 2v2"/><path d="M20 16v2a2 2 0 0 1-2 2h-2"/><path d="M8 20H6a2 2 0 0 1-2-2v-2"/><path d="M4 12h16"/></svg> Photos</h2>
+        <p class="muted small">In the order turn asks for them. The front is the least useful photo - it is the one counterfeiters copy well.</p>
+        <div id="photo-slots" class="photo-grid"></div>
+        <div class="field">
+          <label for="code-destination">Code destination <span class="muted small">(auto-filled from photo if a QR is found)</span></label>
+          <input type="text" id="code-destination" placeholder="Paste or type the code / URL here">
+        </div>
+      </div>
+
+      <div class="card sec" id="sec-seller">
+        <h2><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14"/><path d="M15 6v14"/></svg> About the seller</h2>
+        <div class="field"><span class="field-label">Where did you get it?</span><select id="seller-channel" data-seg="chips" aria-label="Where did you get it?">
+          <option value="licensed_dispensary">Licensed dispensary</option>
+          <option value="delivery_service">Licensed delivery service</option>
+          <option value="smoke_shop">Smoke shop or convenience store</option>
+          <option value="online_or_social">Online or social-media seller</option>
+          <option value="street">Street or individual</option>
+          <option value="unknown" selected>Not sure</option>
+        </select></div>
+        <div class="field-row">
+          <div class="field"><label for="seller-name">Store name</label><input type="text" id="seller-name" placeholder="e.g. Green Door Collective"></div>
+          <div class="field"><label for="seller-license">Licence number</label><input type="text" id="seller-license" placeholder="C10-0000000-LIC"></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="seller-price">Price paid (USD)</label><input type="number" min="0" step="0.01" inputmode="decimal" id="seller-price" placeholder="45.00"></div>
+          <div class="field"><label for="seller-city">City</label><input type="text" id="seller-city" placeholder="e.g. Oakland"></div>
+        </div>
+      </div>
+
+      <div class="run-bar">
+        <button id="run-check-btn" class="btn primary big-tap block" disabled><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg> Run check</button>
+        <p class="muted small center">Photos are only sent to the check service for this analysis - never stored unless you later choose to build a report.</p>
+      </div>
+      <div id="check-error" class="check-error"></div>
+      <div id="check-progress" class="check-progress"></div>
+    </section>
+
+    <!-- RESULT -->
+    <section id="screen-result" class="screen">
+      <h1>Result</h1>
+      <div class="result-inner"></div>
+    </section>
+
+    <!-- REPORT -->
+    <section id="screen-report" class="screen">
+      <h1>Build a report</h1>
+      <div class="report-inner"></div>
+    </section>
+
+    <!-- STATS -->
+    <section id="screen-stats" class="screen">
+      <h1>Stats</h1>
+      <p class="muted small">Anonymous counts only. Test scans are excluded.</p>
+      <div class="stats-inner"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="screen-about" class="screen">
+      <h1>About &amp; privacy</h1>
+      <p class="muted">PodCheck is an independent pre-screening tool. It is <strong>not affiliated with turn</strong>.</p>
+
+      <div class="card">
+        <h2><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg> The engine, live</h2>
+        <div class="facts" id="about-live">
+          <div class="fact"><span class="fact-k">Version</span><span class="fact-v" data-h="version">—</span></div>
+          <div class="fact"><span class="fact-k">Products in catalog</span><span class="fact-v" data-h="catalog_n">—</span></div>
+          <div class="fact"><span class="fact-k">Barcodes from turn's hub</span><span class="fact-v" data-h="upc_n">—</span></div>
+          <div class="fact"><span class="fact-k">CA licence database</span><span class="fact-v" data-h="dcc_api">—</span></div>
+        </div>
+        <p class="muted small">Read from the check service when this page loaded - not typed in.</p>
+      </div>
+
+      <h2>Which checks apply to which product</h2>
+      <div class="cov-wrap" role="region" aria-label="Which checks apply to which product" tabindex="0"><table class="cov">
+<thead><tr><th scope="col">Product</th><th scope="col">Registry QR</th><th scope="col">Inside foil</th><th scope="col">Sticker</th><th scope="col">Artwork</th><th scope="col">Barcode</th><th scope="col">Size</th><th scope="col">Catalog</th></tr></thead>
+<tbody><tr><th scope="row"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="5" width="8" height="15" rx="2.5"/><path d="M10 5V3.5h4V5"/><path d="M8 12h8"/></svg><span>Pod (pouch)</span></th><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td></tr><tr><th scope="row"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9.5" y="2.5" width="5" height="19" rx="2.5"/><circle cx="12" cy="7" r="1"/><path d="M12 18v1"/></svg><span>All-in-one (pouch)</span></th><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td></tr><tr><th scope="row"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="7" width="16" height="13" rx="3"/><path d="M4 11h16"/><path d="M8 7V5.5a1.5 1.5 0 0 1 1.5-1.5h5A1.5 1.5 0 0 1 16 5.5V7"/></svg><span>Live-resin tin (NY)</span></th><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-no"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12h12"/></svg><span class="visually-hidden">not applicable</span></span></td><td><span class="cov-no"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12h12"/></svg><span class="visually-hidden">not applicable</span></span></td><td><span class="cov-no"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12h12"/></svg><span class="visually-hidden">not applicable</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td></tr><tr><th scope="row"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="3"/><circle cx="12" cy="9" r="1.5"/><path d="M10 16h4"/></svg><span>turn one</span></th><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-no"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12h12"/></svg><span class="visually-hidden">not applicable</span></span></td><td><span class="cov-no"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12h12"/></svg><span class="visually-hidden">not applicable</span></span></td><td><span class="cov-no"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12h12"/></svg><span class="visually-hidden">not applicable</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-no"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12h12"/></svg><span class="visually-hidden">not applicable</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td></tr><tr><th scope="row"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-5-3-8-7-8-12 0 0 4 0 8 3 4-3 8-3 8-3 0 5-3 9-8 12z"/><path d="M12 12v9"/></svg><span>Hemp line (online)</span></th><td><span class="cov-no"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12h12"/></svg><span class="visually-hidden">not applicable</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-no"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12h12"/></svg><span class="visually-hidden">not applicable</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td><td><span class="cov-yes"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span class="visually-hidden">yes</span></span></td></tr></tbody></table></div>
+
+      <h2>What each factor measures</h2>
+      <ul class="about-factor-list">
+        <li><strong>Code destination</strong> <span class="weight-tag">35 pts</span> — the QR is resolved server-side. A Metrc Retail ID that the state registry recognises scores in full; a code the registry has never issued, or one pointing somewhere else, caps the score.</li>
+        <li><strong>Inside of the pouch</strong> <span class="weight-tag">12 pts - pouch products</span> — you answer. Genuine turn pouches carry the turn logo pattern on the inside foil; plain foil caps the score at 40.</li>
+        <li><strong>Compliance sticker position</strong> <span class="weight-tag">8 pts - pouch products</span> — you answer. Genuine units carry the state sticker on the back label; a sticker on the front caps at 44, no sticker caps at 60.</li>
+        <li><strong>Device vs pouch artwork</strong> <span class="weight-tag">5 pts</span> — turn prints a pod (with "pen sold separately") on pod pouches and a pen on all-in-one pouches; the artwork must match what is inside.</li>
+        <li><strong>Barcode vs turn's asset hub</strong> <span class="weight-tag">10 pts</span> — the UPC under the barcode is looked up against the barcodes turn publishes for its own products; a real barcode on the wrong flavor or device is a copied-label tell.</li>
+        <li><strong>Flavor, size and effect vs turn's catalog</strong> <span class="weight-tag">10 pts</span> — the name and the three short lines under it are matched against turn.me's own listing (142 products, four states, September 2026). A name that isn't listed proves nothing on its own; tags that belong to a different genuine flavor cap the score at 30.</li>
+        <li><strong>Compliance label text</strong> <span class="weight-tag">15 pts</span> — text read from your back-label photo, checked against California panel rules (warning symbol, THC, licence format, dates). CA rules only for now.</li>
+        <li><strong>Seller licence</strong> <span class="weight-tag">10 pts</span> — the licence number or store name you enter is looked up live in the California DCC database. New York OCM lookup is not wired yet.</li>
+        <li><strong>Purchase context</strong> <span class="weight-tag">5 pts</span> — where you bought it and what you paid.</li>
+      </ul>
+      <p class="muted small">There is no image-recognition "visual match" factor. PodCheck does not judge print quality or colour from photos; every factor above is either a registry lookup, a text match against turn's published catalog and barcodes, or an answer you give about the physical package.</p>
+      <p class="muted small">Factors that are unavailable (no photo, no licence entered, wrong device for the check) are excluded from the denominator rather than scored zero.</p>
+
+      <h2>Sources</h2>
+      <ul class="link-list">
+        <li>State registries: Metrc Retail ID landing pages for New York and California.</li>
+        <li>turn's catalog and barcodes: turn.me listings and turn's official public asset hub (pulled Sep 7 2026).</li>
+        <li>Pouch tells: turn's own account answering "is this real?" posts, and turn's 2025 budtender guide.</li>
+      </ul>
+
+      <h2>Privacy</h2>
+      <p class="muted small">Photos are analyzed in-memory for a check and are not stored. Photos are only stored on our servers if you explicitly build a report and check the consent box, so they can be attached for you.</p>
+
+      <h2>Links</h2>
+      <ul class="link-list">
+        <li><a href="https://turn.me" target="_blank" rel="noopener">turn.me - official site</a></li>
+        <li><a href="https://www.cannabis.ca.gov/resources/file-complaint/" target="_blank" rel="noopener">California DCC - file a complaint</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <nav class="tabbar" aria-label="App">
+    <a href="#home" data-route="home"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></svg><span>Home</span></a>
+    <a href="#scan" data-route="scan"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V6a2 2 0 0 1 2-2h2"/><path d="M16 4h2a2 2 0 0 1 2 2v2"/><path d="M20 16v2a2 2 0 0 1-2 2h-2"/><path d="M8 20H6a2 2 0 0 1-2-2v-2"/><path d="M4 12h16"/></svg><span>Scan</span></a>
+    <a href="#check" data-route="check"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11"/><path d="M9 12h11"/><path d="M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg><span>Check</span></a>
+    <a href="#stats" data-route="stats"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-8"/><path d="M22 20H2"/></svg><span>Stats</span></a>
+    <a href="#about" data-route="about"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 8h.01"/></svg><span>About</span></a>
+  </nav>
+
+  <div id="toast-host" aria-live="polite"></div>
+</div>
+
+<script src="icons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+<script type="module">import { readBarcodes } from "https://cdn.jsdelivr.net/npm/zxing-wasm@2/reader+esm"; window.__zxingRead = readBarcodes;</script>
+<script src="app.js"></script>
+<script src="ui.js"></script>
+</body>
+</html>
