@@ -1,63 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-labelledby="tfw dfw" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
-<title id="tfw">PodCheck scoring: nine factors, weights summing to 100</title>
-<desc id="dfw">A horizontal bar chart of the nine factors PodCheck scores, sorted by weight. Code destination, the state track-and-trace registry lookup, carries the largest weight at 35 of 100. Compliance label OCR and inside-of-the-pouch carry 12 each. Barcode and catalog checks carry 10 each. Sticker position carries 8, pouch artwork 5, seller licence 4 and purchase context 4. The weights total exactly 100. Colour encodes where each factor's evidence comes from. Three factors apply to pouch products only and are excluded from the denominator, never scored zero, when the product is not a pouch. Four hard signals cap the total score regardless of the other factors.</desc>
-<rect width="1200" height="620" fill="#0B1015"/>
-<text x="64" y="52" fill="#F3F7F9" font-size="25" font-weight="600">Nine factors, weight 100</text>
-<text x="64" y="82" fill="#A7B6C2" font-size="15">No model judges the photos. Every factor is a registry lookup, a text match against published data, or an answer the user gives.</text>
-<text x="436" y="139" fill="#F3F7F9" font-size="15" text-anchor="end">Code destination (state registry QR)</text>
-<rect x="452" y="118" width="560" height="28" rx="4" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
-<rect x="452" y="118" width="560" height="28" rx="4" fill="#2DD4E8" stroke="#2DD4E8" stroke-width="1.5"/>
-<text x="1024" y="139" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">35</text>
-<text x="436" y="177" fill="#F3F7F9" font-size="15" text-anchor="end">Compliance label text (OCR)</text>
-<rect x="452" y="156" width="560" height="28" rx="4" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
-<rect x="452" y="156" width="192" height="28" rx="4" fill="#E87BC8" stroke="#E87BC8" stroke-width="1.5"/>
-<text x="656" y="177" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">12</text>
-<text x="436" y="215" fill="#F3F7F9" font-size="15" text-anchor="end">Inside of the pouch</text>
-<rect x="452" y="194" width="560" height="28" rx="4" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
-<rect x="452" y="194" width="192" height="28" rx="4" fill="#F5A524" stroke="#F5A524" stroke-width="1.5"/>
-<text x="656" y="215" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">12</text>
-<text x="686" y="215" fill="#A7B6C2" font-size="12">pouch only</text>
-<text x="436" y="253" fill="#F3F7F9" font-size="15" text-anchor="end">Barcode vs 323 published UPCs</text>
-<rect x="452" y="232" width="560" height="28" rx="4" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
-<rect x="452" y="232" width="160" height="28" rx="4" fill="#A78BFA" stroke="#A78BFA" stroke-width="1.5"/>
-<text x="624" y="253" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">10</text>
-<text x="436" y="291" fill="#F3F7F9" font-size="15" text-anchor="end">Flavor / descriptors / size vs catalog</text>
-<rect x="452" y="270" width="560" height="28" rx="4" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
-<rect x="452" y="270" width="160" height="28" rx="4" fill="#A78BFA" stroke="#A78BFA" stroke-width="1.5"/>
-<text x="624" y="291" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">10</text>
-<text x="436" y="329" fill="#F3F7F9" font-size="15" text-anchor="end">Compliance sticker position</text>
-<rect x="452" y="308" width="560" height="28" rx="4" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
-<rect x="452" y="308" width="128" height="28" rx="4" fill="#F5A524" stroke="#F5A524" stroke-width="1.5"/>
-<text x="592" y="329" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">8</text>
-<text x="622" y="329" fill="#A7B6C2" font-size="12">pouch only</text>
-<text x="436" y="367" fill="#F3F7F9" font-size="15" text-anchor="end">Pouch artwork vs device inside</text>
-<rect x="452" y="346" width="560" height="28" rx="4" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
-<rect x="452" y="346" width="80" height="28" rx="4" fill="#A78BFA" stroke="#A78BFA" stroke-width="1.5"/>
-<text x="544" y="367" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">5</text>
-<text x="574" y="367" fill="#A7B6C2" font-size="12">pouch only</text>
-<text x="436" y="405" fill="#F3F7F9" font-size="15" text-anchor="end">Seller licence (CA DCC live search)</text>
-<rect x="452" y="384" width="560" height="28" rx="4" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
-<rect x="452" y="384" width="64" height="28" rx="4" fill="#4ADE80" stroke="#4ADE80" stroke-width="1.5"/>
-<text x="528" y="405" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">4</text>
-<text x="436" y="443" fill="#F3F7F9" font-size="15" text-anchor="end">Purchase context</text>
-<rect x="452" y="422" width="560" height="28" rx="4" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
-<rect x="452" y="422" width="64" height="28" rx="4" fill="#F5A524" stroke="#F5A524" stroke-width="1.5"/>
-<text x="528" y="443" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">4</text>
-<line x1="64" y1="466" x2="1136" y2="466" stroke="#A7B6C2" stroke-width="1"/>
-<text x="452" y="492" fill="#F3F7F9" font-size="16" font-weight="600" text-anchor="end">TOTAL</text>
-<text x="468" y="492" fill="#4ADE80" font-size="16" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">100</text>
-<rect x="64" y="516" width="13" height="13" rx="3" fill="#2DD4E8" stroke="#2DD4E8" stroke-width="1"/>
-<text x="84" y="527" fill="#A7B6C2" font-size="13">state track-and-trace registry</text>
-<rect x="297" y="516" width="13" height="13" rx="3" fill="#A78BFA" stroke="#A78BFA" stroke-width="1"/>
-<text x="317" y="527" fill="#A7B6C2" font-size="13">turn's own published data</text>
-<rect x="495" y="516" width="13" height="13" rx="3" fill="#F5A524" stroke="#F5A524" stroke-width="1"/>
-<text x="515" y="527" fill="#A7B6C2" font-size="13">answer the user gives</text>
-<rect x="665" y="516" width="13" height="13" rx="3" fill="#E87BC8" stroke="#E87BC8" stroke-width="1"/>
-<text x="685" y="527" fill="#A7B6C2" font-size="13">OCR of the label photo</text>
-<rect x="842" y="516" width="13" height="13" rx="3" fill="#4ADE80" stroke="#4ADE80" stroke-width="1"/>
-<text x="862" y="527" fill="#A7B6C2" font-size="13">public licence search</text>
-<rect x="64" y="550" width="1072" height="76" rx="8" fill="#1E2833" stroke="#F5A524" stroke-width="2"/>
-<text x="86" y="576" fill="#F5A524" font-size="14" font-weight="600">HARD SIGNALS CAP THE SCORE</text>
-<text x="86" y="600" fill="#F3F7F9" font-size="13.5">Plain foil inside the pouch -&gt; 40   Sticker on the front -&gt; 44   Barcode belongs to another flavor -&gt; 30   Artwork shows the wrong device -&gt; 44</text>
-<text x="86" y="618" fill="#A7B6C2" font-size="12.5">Factors that cannot apply to a product are excluded from the denominator, never scored zero.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 926" width="1240" height="926" role="img" aria-labelledby="tfc dfc" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+<title id="tfc">PodCheck v2.0 scoring: nine deterministic factors, no image guessing</title>
+<desc id="dfc">A horizontal bar chart of the nine factors PodCheck scores, sorted by weight, summing to exactly 100. The state registry lookup carries 35. Four factors totalling 29 are answers you give about the physical package. Two totalling 20 are text matches against turn's own published catalogue and barcodes. One worth 12 reads the compliance panel from a photo. One worth 4 is a live California licence lookup. Colour encodes where each factor's evidence comes from. A stacked summary bar at the bottom shows the same five sources.</desc>
+<rect width="1240" height="926" fill="#0B1015"/>
+<text x="72" y="56" fill="#F3F7F9" font-size="26" font-weight="600">What PodCheck actually scores</text>
+<text x="72" y="88" fill="#A7B6C2" font-size="15">Nine deterministic factors. No model judges the photos - every factor is a lookup, a text match, or something you tell it.</text>
+<text x="72" y="112" fill="#A7B6C2" font-size="15">Factors that cannot apply to a product are left OUT of the denominator, never scored zero.</text>
+<rect x="72" y="132" width="1096" height="1" fill="#A7B6C2"/>
+<text x="72" y="162" fill="#A7B6C2" font-size="13" font-weight="600">FACTOR</text>
+<text x="248" y="162" fill="#A7B6C2" font-size="13" font-weight="600">WEIGHT</text>
+<text x="1168" y="162" fill="#A7B6C2" font-size="13" font-weight="600" text-anchor="end">EVIDENCE SOURCE</text>
+<text x="72" y="198" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">qr</text>
+<rect x="248" y="180" width="679" height="26" rx="4" fill="#2DD4E8" stroke="#2DD4E8" stroke-width="1.5"/>
+<text x="939" y="199" fill="#2DD4E8" font-size="15" font-weight="600">35</text>
+<text x="72" y="222" fill="#A7B6C2" font-size="13">Metrc Retail ID resolved server-side (NY/CA)</text>
+<text x="1168" y="199" fill="#2DD4E8" font-size="14" text-anchor="end">state registry</text>
+<text x="72" y="260" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">inside</text>
+<rect x="248" y="242" width="232" height="26" rx="4" fill="#4ADE80" stroke="#4ADE80" stroke-width="1.5"/>
+<text x="492" y="261" fill="#4ADE80" font-size="15" font-weight="600">12</text>
+<text x="72" y="284" fill="#A7B6C2" font-size="13">inside foil carries turn's logo pattern</text>
+<text x="1168" y="261" fill="#4ADE80" font-size="14" text-anchor="end">you report</text>
+<text x="72" y="322" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">panel</text>
+<rect x="248" y="304" width="232" height="26" rx="4" fill="#F5A524" stroke="#F5A524" stroke-width="1.5"/>
+<text x="492" y="323" fill="#F5A524" font-size="15" font-weight="600">12</text>
+<text x="72" y="346" fill="#A7B6C2" font-size="13">compliance-panel text vs California rules</text>
+<text x="1168" y="323" fill="#F5A524" font-size="14" text-anchor="end">photo OCR</text>
+<text x="72" y="384" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">upc</text>
+<rect x="248" y="366" width="194" height="26" rx="4" fill="#A78BFA" stroke="#A78BFA" stroke-width="1.5"/>
+<text x="454" y="385" fill="#A78BFA" font-size="15" font-weight="600">10</text>
+<text x="72" y="408" fill="#A7B6C2" font-size="13">barcode is one turn publishes (323 UPCs)</text>
+<text x="1168" y="385" fill="#A78BFA" font-size="14" text-anchor="end">turn's data</text>
+<text x="72" y="446" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">catalog</text>
+<rect x="248" y="428" width="194" height="26" rx="4" fill="#A78BFA" stroke="#A78BFA" stroke-width="1.5"/>
+<text x="454" y="447" fill="#A78BFA" font-size="15" font-weight="600">10</text>
+<text x="72" y="470" fill="#A7B6C2" font-size="13">flavor, lines, size, up/down vs catalog (198)</text>
+<text x="1168" y="447" fill="#A78BFA" font-size="14" text-anchor="end">turn's data</text>
+<text x="72" y="508" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">sticker</text>
+<rect x="248" y="490" width="155" height="26" rx="4" fill="#4ADE80" stroke="#4ADE80" stroke-width="1.5"/>
+<text x="415" y="509" fill="#4ADE80" font-size="15" font-weight="600">8</text>
+<text x="72" y="532" fill="#A7B6C2" font-size="13">state compliance sticker position</text>
+<text x="1168" y="509" fill="#4ADE80" font-size="14" text-anchor="end">you report</text>
+<text x="72" y="570" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">artwork</text>
+<rect x="248" y="552" width="97" height="26" rx="4" fill="#4ADE80" stroke="#4ADE80" stroke-width="1.5"/>
+<text x="357" y="571" fill="#4ADE80" font-size="15" font-weight="600">5</text>
+<text x="72" y="594" fill="#A7B6C2" font-size="13">pouch window silhouette matches the device</text>
+<text x="1168" y="571" fill="#4ADE80" font-size="14" text-anchor="end">you report</text>
+<text x="72" y="632" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">license</text>
+<rect x="248" y="614" width="77" height="26" rx="4" fill="#E87BC8" stroke="#E87BC8" stroke-width="1.5"/>
+<text x="337" y="633" fill="#E87BC8" font-size="15" font-weight="600">4</text>
+<text x="72" y="656" fill="#A7B6C2" font-size="13">seller licence in the California DCC database</text>
+<text x="1168" y="633" fill="#E87BC8" font-size="14" text-anchor="end">live lookup</text>
+<text x="72" y="694" fill="#F3F7F9" font-size="15" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">context</text>
+<rect x="248" y="676" width="77" height="26" rx="4" fill="#4ADE80" stroke="#4ADE80" stroke-width="1.5"/>
+<text x="337" y="695" fill="#4ADE80" font-size="15" font-weight="600">4</text>
+<text x="72" y="718" fill="#A7B6C2" font-size="13">where it was bought and what was paid</text>
+<text x="1168" y="695" fill="#4ADE80" font-size="14" text-anchor="end">you report</text>
+<text x="72" y="770" fill="#F3F7F9" font-size="17" font-weight="600">Where the 100 points come from</text>
+<rect x="72" y="790" width="383" height="38" fill="#2DD4E8" stroke="#2DD4E8" stroke-width="1.5"/>
+<text x="263" y="815" fill="#0B1015" font-size="15" font-weight="600" text-anchor="middle">35</text>
+<rect x="455" y="790" width="317" height="38" fill="#4ADE80" stroke="#4ADE80" stroke-width="1.5"/>
+<text x="613" y="815" fill="#0B1015" font-size="15" font-weight="600" text-anchor="middle">29</text>
+<rect x="772" y="790" width="219" height="38" fill="#A78BFA" stroke="#A78BFA" stroke-width="1.5"/>
+<text x="881" y="815" fill="#0B1015" font-size="15" font-weight="600" text-anchor="middle">20</text>
+<rect x="991" y="790" width="131" height="38" fill="#F5A524" stroke="#F5A524" stroke-width="1.5"/>
+<text x="1056" y="815" fill="#0B1015" font-size="15" font-weight="600" text-anchor="middle">12</text>
+<rect x="1122" y="790" width="43" height="38" fill="#E87BC8" stroke="#E87BC8" stroke-width="1.5"/>
+<rect x="72" y="841" width="13" height="13" rx="2" fill="#2DD4E8" stroke="#2DD4E8" stroke-width="1"/>
+<text x="92" y="852" fill="#A7B6C2" font-size="14">state registry 35</text>
+<rect x="258" y="841" width="13" height="13" rx="2" fill="#4ADE80" stroke="#4ADE80" stroke-width="1"/>
+<text x="278" y="852" fill="#A7B6C2" font-size="14">you report 29</text>
+<rect x="408" y="841" width="13" height="13" rx="2" fill="#A78BFA" stroke="#A78BFA" stroke-width="1"/>
+<text x="428" y="852" fill="#A7B6C2" font-size="14">turn's data 20</text>
+<rect x="567" y="841" width="13" height="13" rx="2" fill="#F5A524" stroke="#F5A524" stroke-width="1"/>
+<text x="587" y="852" fill="#A7B6C2" font-size="14">photo OCR 12</text>
+<rect x="708" y="841" width="13" height="13" rx="2" fill="#E87BC8" stroke="#E87BC8" stroke-width="1"/>
+<text x="728" y="852" fill="#A7B6C2" font-size="14">live lookup 4</text>
+<text x="72" y="886" fill="#A7B6C2" font-size="14">Total 100. Verdict bands: likely_authentic / could_not_verify / signs_of_counterfeit, plus a lean hint when too little was measured.</text>
+<text x="72" y="910" fill="#A7B6C2" font-size="14">A low score is NOT proof of a counterfeit, and PodCheck is not affiliated with turn.</text>
 </svg>

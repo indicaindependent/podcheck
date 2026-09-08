@@ -1,63 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 690" width="1200" height="690" role="img" aria-labelledby="tom dom" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
-<title id="tom">PodCheck verdicts and the ten registry scan outcomes</title>
-<desc id="dom">Two grouped lists. First, the three verdict bands the scoring engine returns: likely authentic, could not verify, and signs of counterfeit. Second, the ten distinct scan outcome strings the registry layer can return, colour-coded by meaning: the state confirms the unit; the state says no in a way that matters; the input or link was bad and should be rescanned; or no answer was received, which is explicitly not evidence either way. A failed scan is not proof of a counterfeit.</desc>
-<rect width="1200" height="690" fill="#0B1015"/>
-<text x="64" y="50" fill="#F3F7F9" font-size="25" font-weight="600">Three verdicts, ten scan outcomes</text>
-<text x="64" y="80" fill="#A7B6C2" font-size="15">A failed scan is not proof of a counterfeit. The app distinguishes ten different reasons a code can fail.</text>
-<text x="64" y="108" fill="#A7B6C2" font-size="13" font-weight="600" letter-spacing="1">VERDICT BANDS</text>
-<rect x="64" y="122" width="1072" height="40" rx="7" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
-<rect x="64" y="122" width="7" height="40" rx="3.5" fill="#4ADE80" stroke="#4ADE80" stroke-width="1"/>
-<text x="90" y="148" fill="#4ADE80" font-size="15.5" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">likely_authentic</text>
-<text x="1124" y="148" fill="#F3F7F9" font-size="14" text-anchor="end">Everything checkable checked out</text>
-<rect x="64" y="168" width="1072" height="40" rx="7" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
-<rect x="64" y="168" width="7" height="40" rx="3.5" fill="#F5A524" stroke="#F5A524" stroke-width="1"/>
-<text x="90" y="194" fill="#F5A524" font-size="15.5" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">could_not_verify</text>
-<text x="1124" y="194" fill="#F3F7F9" font-size="14" text-anchor="end">Not enough signal to call it either way</text>
-<rect x="64" y="214" width="1072" height="40" rx="7" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
-<rect x="64" y="214" width="7" height="40" rx="3.5" fill="#FB7185" stroke="#FB7185" stroke-width="1"/>
-<text x="90" y="240" fill="#FB7185" font-size="15.5" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">signs_of_counterfeit</text>
-<text x="1124" y="240" fill="#F3F7F9" font-size="14" text-anchor="end">One or more checks actively failed</text>
-<text x="64" y="278" fill="#A7B6C2" font-size="13" font-weight="600" letter-spacing="1">SCAN OUTCOMES</text>
-<rect x="64" y="292" width="1072" height="30" rx="6" fill="#161E27" stroke="#A7B6C2" stroke-width="1.2"/>
-<rect x="64" y="292" width="6" height="30" rx="3" fill="#4ADE80" stroke="#4ADE80" stroke-width="1"/>
-<text x="88" y="312" fill="#4ADE80" font-size="14" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">verified</text>
-<text x="1124" y="312" fill="#A7B6C2" font-size="13" text-anchor="end">registry holds the unit</text>
-<rect x="64" y="326" width="1072" height="30" rx="6" fill="#161E27" stroke="#A7B6C2" stroke-width="1.2"/>
-<rect x="64" y="326" width="6" height="30" rx="3" fill="#FB7185" stroke="#FB7185" stroke-width="1"/>
-<text x="88" y="346" fill="#FB7185" font-size="14" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">unit_not_issued</text>
-<text x="1124" y="346" fill="#A7B6C2" font-size="13" text-anchor="end">real package tag, unit number never issued</text>
-<rect x="64" y="360" width="1072" height="30" rx="6" fill="#161E27" stroke="#A7B6C2" stroke-width="1.2"/>
-<rect x="64" y="360" width="6" height="30" rx="3" fill="#FB7185" stroke="#FB7185" stroke-width="1"/>
-<text x="88" y="380" fill="#FB7185" font-size="14" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">package_unknown</text>
-<text x="1124" y="380" fill="#A7B6C2" font-size="13" text-anchor="end">registry has never seen this package</text>
-<rect x="64" y="394" width="1072" height="30" rx="6" fill="#161E27" stroke="#A7B6C2" stroke-width="1.2"/>
-<rect x="64" y="394" width="6" height="30" rx="3" fill="#F5A524" stroke="#F5A524" stroke-width="1"/>
-<text x="88" y="414" fill="#F5A524" font-size="14" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">not_state_registry</text>
-<text x="1124" y="414" fill="#A7B6C2" font-size="13" text-anchor="end">the code is not a state registry code</text>
-<rect x="64" y="428" width="1072" height="30" rx="6" fill="#161E27" stroke="#A7B6C2" stroke-width="1.2"/>
-<rect x="64" y="428" width="6" height="30" rx="3" fill="#F5A524" stroke="#F5A524" stroke-width="1"/>
-<text x="88" y="448" fill="#F5A524" font-size="14" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">signet_unresolved</text>
-<text x="1124" y="448" fill="#A7B6C2" font-size="13" text-anchor="end">short link would not resolve</text>
-<rect x="64" y="462" width="1072" height="30" rx="6" fill="#161E27" stroke="#A7B6C2" stroke-width="1.2"/>
-<rect x="64" y="462" width="6" height="30" rx="3" fill="#F5A524" stroke="#F5A524" stroke-width="1"/>
-<text x="88" y="482" fill="#F5A524" font-size="14" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">malformed_retail_id</text>
-<text x="1124" y="482" fill="#A7B6C2" font-size="13" text-anchor="end">not a valid Retail ID - usually a misread</text>
-<rect x="64" y="496" width="1072" height="30" rx="6" fill="#161E27" stroke="#A7B6C2" stroke-width="1.2"/>
-<rect x="64" y="496" width="6" height="30" rx="3" fill="#A7B6C2" stroke="#A7B6C2" stroke-width="1"/>
-<text x="88" y="516" fill="#A7B6C2" font-size="14" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">registry_error</text>
-<text x="1124" y="516" fill="#A7B6C2" font-size="13" text-anchor="end">registry errored - NOT evidence either way</text>
-<rect x="64" y="530" width="1072" height="30" rx="6" fill="#161E27" stroke="#A7B6C2" stroke-width="1.2"/>
-<rect x="64" y="530" width="6" height="30" rx="3" fill="#A7B6C2" stroke="#A7B6C2" stroke-width="1"/>
-<text x="88" y="550" fill="#A7B6C2" font-size="14" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">fetch_error</text>
-<text x="1124" y="550" fill="#A7B6C2" font-size="13" text-anchor="end">could not reach the registry - retry</text>
-<rect x="64" y="564" width="1072" height="30" rx="6" fill="#161E27" stroke="#A7B6C2" stroke-width="1.2"/>
-<rect x="64" y="564" width="6" height="30" rx="3" fill="#A7B6C2" stroke="#A7B6C2" stroke-width="1"/>
-<text x="88" y="584" fill="#A7B6C2" font-size="14" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">not_found</text>
-<text x="1124" y="584" fill="#A7B6C2" font-size="13" text-anchor="end">generic miss, mapped to one of the above</text>
-<rect x="64" y="598" width="1072" height="30" rx="6" fill="#161E27" stroke="#A7B6C2" stroke-width="1.2"/>
-<rect x="64" y="598" width="6" height="30" rx="3" fill="#A7B6C2" stroke="#A7B6C2" stroke-width="1"/>
-<text x="88" y="618" fill="#A7B6C2" font-size="14" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">empty</text>
-<text x="1124" y="618" fill="#A7B6C2" font-size="13" text-anchor="end">nothing scanned yet</text>
-<text x="64" y="654" fill="#A7B6C2" font-size="13.5">green the state confirms it   red the state says no in a way that matters   amber bad input or link, rescan   grey no answer, not evidence</text>
-<text x="64" y="678" fill="#A7B6C2" font-size="13.5">Not affiliated with turn. The only real verification is a scan inside the official turnapp.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 752" width="1240" height="752" role="img" aria-labelledby="tom dom" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+<title id="tom">PodCheck registry outcomes: seven distinct answers, not pass or fail</title>
+<desc id="dom">A vertical list of the seven registry outcomes PodCheck returns. Verified means the state registry holds the unit. Two outcomes mean the state says no in a way that matters: a real package tag with a unit number never issued, and a package the registry has never seen. Three mean the code or link was bad and should be rescanned. One means the registry was unreachable, which is explicitly not evidence either way.</desc>
+<rect width="1240" height="752" fill="#0B1015"/>
+<text x="72" y="56" fill="#F3F7F9" font-size="26" font-weight="600">Seven answers, not two</text>
+<text x="72" y="88" fill="#A7B6C2" font-size="15">A failed scan is not proof of a counterfeit. The app tells the user WHICH kind of no it is.</text>
+<rect x="72" y="108" width="1096" height="1" fill="#A7B6C2"/>
+<rect x="72" y="138" width="1096" height="62" rx="8" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
+<rect x="72" y="138" width="7" height="62" rx="3.5" fill="#4ADE80" stroke="#4ADE80" stroke-width="1"/>
+<text x="100" y="164" fill="#4ADE80" font-size="16" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">verified</text>
+<text x="1156" y="164" fill="#F3F7F9" font-size="15" text-anchor="end">The registry has the unit</text>
+<rect x="72" y="212" width="1096" height="62" rx="8" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
+<rect x="72" y="212" width="7" height="62" rx="3.5" fill="#FB7185" stroke="#FB7185" stroke-width="1"/>
+<text x="100" y="238" fill="#FB7185" font-size="16" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">unit_not_issued</text>
+<text x="1156" y="238" fill="#F3F7F9" font-size="15" text-anchor="end">Real package tag, unit number never issued</text>
+<rect x="72" y="286" width="1096" height="62" rx="8" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
+<rect x="72" y="286" width="7" height="62" rx="3.5" fill="#FB7185" stroke="#FB7185" stroke-width="1"/>
+<text x="100" y="312" fill="#FB7185" font-size="16" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">package_unknown</text>
+<text x="1156" y="312" fill="#F3F7F9" font-size="15" text-anchor="end">The registry has never seen this package</text>
+<rect x="72" y="360" width="1096" height="62" rx="8" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
+<rect x="72" y="360" width="7" height="62" rx="3.5" fill="#F5A524" stroke="#F5A524" stroke-width="1"/>
+<text x="100" y="386" fill="#F5A524" font-size="16" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">not_state_registry</text>
+<text x="1156" y="386" fill="#F3F7F9" font-size="15" text-anchor="end">Not a state registry code at all</text>
+<rect x="72" y="434" width="1096" height="62" rx="8" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
+<rect x="72" y="434" width="7" height="62" rx="3.5" fill="#F5A524" stroke="#F5A524" stroke-width="1"/>
+<text x="100" y="460" fill="#F5A524" font-size="16" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">malformed_retail_id</text>
+<text x="1156" y="460" fill="#F3F7F9" font-size="15" text-anchor="end">Not a valid Retail ID. Usually a misread</text>
+<rect x="72" y="508" width="1096" height="62" rx="8" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
+<rect x="72" y="508" width="7" height="62" rx="3.5" fill="#F5A524" stroke="#F5A524" stroke-width="1"/>
+<text x="100" y="534" fill="#F5A524" font-size="16" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">signet_unresolved</text>
+<text x="1156" y="534" fill="#F3F7F9" font-size="15" text-anchor="end">Short link would not resolve</text>
+<rect x="72" y="582" width="1096" height="62" rx="8" fill="#161E27" stroke="#A7B6C2" stroke-width="1.5"/>
+<rect x="72" y="582" width="7" height="62" rx="3.5" fill="#A7B6C2" stroke="#A7B6C2" stroke-width="1"/>
+<text x="100" y="608" fill="#A7B6C2" font-size="16" font-weight="600" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">registry_error / fetch_error</text>
+<text x="1156" y="608" fill="#F3F7F9" font-size="15" text-anchor="end">Unreachable. NOT evidence either way</text>
+<text x="72" y="686" fill="#A7B6C2" font-size="14">Legend: green the state confirms it. red the state says no in a way that matters. amber the input was bad, rescan. grey no answer, not evidence.</text>
 </svg>

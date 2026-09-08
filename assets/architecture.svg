@@ -1,47 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 470" width="1200" height="470" role="img" aria-labelledby="tar dar" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
-<title id="tar">PodCheck architecture: static PWA, one Worker, seven routes</title>
-<desc id="dar">A left-to-right diagram. A static progressive web app with no framework, plus a separate progressive-enhancement layer, calls a single Cloudflare Worker exposing seven routes. The Worker uses three bindings: Workers AI for label OCR only, D1 for cache, outcomes and reports across seven tables, and R2 for evidence photos stored only on explicit consent. It embeds turn's published catalogue of 198 products and 323 barcodes, and reads two external public sources: the state track-and-trace short-link service and the California DCC public licence search. No credentials are present in the published code.</desc>
-<rect width="1200" height="470" fill="#0B1015"/>
-<text x="64" y="50" fill="#F3F7F9" font-size="25" font-weight="600">Architecture</text>
-<text x="64" y="80" fill="#A7B6C2" font-size="15">One Worker, 7 routes, 3 bindings, 2 public read-only sources, 1 embedded catalogue. No credentials in this repo.</text>
-<rect x="64" y="150" width="184" height="62" rx="8" fill="#161E27" stroke="#2DD4E8" stroke-width="2"/>
-<text x="156" y="177" fill="#F3F7F9" font-size="15.5" font-weight="600" text-anchor="middle">Static PWA</text>
-<text x="156" y="197" fill="#A7B6C2" font-size="12.5" text-anchor="middle">index + app.js</text>
-<rect x="64" y="222" width="184" height="56" rx="8" fill="#161E27" stroke="#2DD4E8" stroke-width="2"/>
-<text x="156" y="249" fill="#F3F7F9" font-size="14" font-weight="600" text-anchor="middle">ui.js</text>
-<text x="156" y="269" fill="#A7B6C2" font-size="12.5" text-anchor="middle">enhancement only</text>
-<line x1="248" y1="182" x2="300" y2="182" stroke="#A7B6C2" stroke-width="2.5" marker-end="url(#ar)"/>
-<line x1="248" y1="250" x2="300" y2="196" stroke="#A7B6C2" stroke-width="2.5" marker-end="url(#ar)"/>
-<rect x="304" y="150" width="200" height="128" rx="8" fill="#161E27" stroke="#2DD4E8" stroke-width="2"/>
-<text x="404" y="177" fill="#F3F7F9" font-size="15.5" font-weight="600" text-anchor="middle">Worker API</text>
-<text x="404" y="196" fill="#A7B6C2" font-size="12" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">/analyze /resolve</text>
-<text x="404" y="214" fill="#A7B6C2" font-size="12" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">/confirm /report</text>
-<text x="404" y="232" fill="#A7B6C2" font-size="12" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">/health /license</text>
-<text x="404" y="250" fill="#A7B6C2" font-size="12" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">/stats</text>
-<line x1="504" y1="214" x2="556" y2="214" stroke="#A7B6C2" stroke-width="2.5" marker-end="url(#ar)"/>
-<rect x="560" y="122" width="166" height="42" rx="8" fill="#161E27" stroke="#A7B6C2" stroke-width="2"/>
-<text x="643" y="149" fill="#F3F7F9" font-size="15.5" font-weight="600" text-anchor="middle">AI</text>
-<text x="643" y="169" fill="#A7B6C2" font-size="12.5" text-anchor="middle">label OCR only</text>
-<rect x="560" y="172" width="166" height="42" rx="8" fill="#161E27" stroke="#A7B6C2" stroke-width="2"/>
-<text x="643" y="199" fill="#F3F7F9" font-size="15.5" font-weight="600" text-anchor="middle">D1</text>
-<text x="643" y="219" fill="#A7B6C2" font-size="12.5" text-anchor="middle">7 tables + 1 index</text>
-<rect x="560" y="222" width="166" height="42" rx="8" fill="#161E27" stroke="#A7B6C2" stroke-width="2"/>
-<text x="643" y="249" fill="#F3F7F9" font-size="15.5" font-weight="600" text-anchor="middle">R2</text>
-<text x="643" y="269" fill="#A7B6C2" font-size="12.5" text-anchor="middle">photos, on consent</text>
-<rect x="560" y="274" width="166" height="46" rx="8" fill="#161E27" stroke="#A78BFA" stroke-width="2"/>
-<text x="643" y="301" fill="#F3F7F9" font-size="14" font-weight="600" text-anchor="middle">Catalogue</text>
-<text x="643" y="321" fill="#A7B6C2" font-size="12.5" text-anchor="middle">198 products, 323 UPCs</text>
-<rect x="786" y="150" width="350" height="52" rx="8" fill="#161E27" stroke="#A78BFA" stroke-width="2"/>
-<text x="961" y="177" fill="#F3F7F9" font-size="15" font-weight="600" text-anchor="middle">State track-and-trace</text>
-<text x="961" y="197" fill="#A7B6C2" font-size="12.5" text-anchor="middle">Retail ID short link  NY + CA</text>
-<rect x="786" y="214" width="350" height="52" rx="8" fill="#161E27" stroke="#A78BFA" stroke-width="2"/>
-<text x="961" y="241" fill="#F3F7F9" font-size="15" font-weight="600" text-anchor="middle">California DCC</text>
-<text x="961" y="261" fill="#A7B6C2" font-size="12.5" text-anchor="middle">public licence search</text>
-<line x1="726" y1="176" x2="780" y2="176" stroke="#A78BFA" stroke-width="2.5" marker-end="url(#ar)"/>
-<line x1="726" y1="240" x2="780" y2="240" stroke="#A78BFA" stroke-width="2.5" marker-end="url(#ar)"/>
-<rect x="64" y="352" width="1072" height="82" rx="8" fill="#1E2833" stroke="#F5A524" stroke-width="2"/>
-<text x="88" y="380" fill="#F5A524" font-size="14.5" font-weight="600">PRE-SCREEN ONLY</text>
-<text x="88" y="404" fill="#F3F7F9" font-size="14.5">Not affiliated with turn. No model judges the photos. Nothing is ever reported automatically - the user sends their own report.</text>
-<text x="88" y="424" fill="#A7B6C2" font-size="13">Photos are analysed in memory and discarded unless the user explicitly builds a report and consents. 21+.</text>
-<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#A7B6C2" stroke="#A7B6C2" stroke-width="1"/></marker></defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 470" width="1240" height="470" role="img" aria-labelledby="tar dar" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+<title id="tar">PodCheck v2.0 architecture: static PWA, one Worker, seven routes</title>
+<desc id="dar">A left-to-right diagram. A static progressive web app with no framework, split into a logic file and an enhancement-only file, calls a single Cloudflare Worker exposing seven routes. The Worker uses three bindings: Workers AI for reading the compliance panel from a photo, D1 for cache and anonymous stats, and R2 for consent-gated evidence photos. It embeds turn's published catalogue of 198 products and 323 barcodes. It reads two external public sources: the state track-and-trace short-link service, and the California licence database. No credentials are in the published code.</desc>
+<rect width="1240" height="470" fill="#0B1015"/>
+<text x="72" y="54" fill="#F3F7F9" font-size="26" font-weight="600">Architecture</text>
+<text x="72" y="86" fill="#A7B6C2" font-size="15">One Worker, seven routes, three bindings, two public read-only sources. No credentials in this repo.</text>
+<defs><marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#A7B6C2" stroke="#A7B6C2" stroke-width="1"/></marker></defs>
+<rect x="72" y="150" width="190" height="68" rx="8" fill="#161E27" stroke="#2DD4E8" stroke-width="2"/>
+<text x="167" y="176" fill="#F3F7F9" font-size="15" font-weight="600" text-anchor="middle">Static PWA</text>
+<text x="167" y="195" fill="#A7B6C2" font-size="12" text-anchor="middle">app.js logic + ui.js</text>
+<line x1="262" y1="184" x2="316" y2="184" stroke="#A7B6C2" stroke-width="2.5" marker-end="url(#a3)"/>
+<rect x="320" y="150" width="210" height="68" rx="8" fill="#161E27" stroke="#2DD4E8" stroke-width="2"/>
+<text x="425" y="176" fill="#F3F7F9" font-size="15" font-weight="600" text-anchor="middle">Worker API</text>
+<text x="425" y="195" fill="#A7B6C2" font-size="12" text-anchor="middle">7 routes</text>
+<text x="425" y="238" fill="#A7B6C2" font-size="11.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">/resolve /analyze /license</text>
+<text x="425" y="255" fill="#A7B6C2" font-size="11.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">/confirm /report /stats /health</text>
+<line x1="530" y1="184" x2="584" y2="184" stroke="#A7B6C2" stroke-width="2.5" marker-end="url(#a3)"/>
+<rect x="588" y="108" width="170" height="44" rx="8" fill="#161E27" stroke="#A7B6C2" stroke-width="2"/>
+<text x="673" y="134" fill="#F3F7F9" font-size="15" font-weight="600" text-anchor="middle">Workers AI</text>
+<text x="673" y="153" fill="#A7B6C2" font-size="12" text-anchor="middle">panel OCR</text>
+<rect x="588" y="162" width="170" height="44" rx="8" fill="#161E27" stroke="#A7B6C2" stroke-width="2"/>
+<text x="673" y="188" fill="#F3F7F9" font-size="15" font-weight="600" text-anchor="middle">D1</text>
+<text x="673" y="207" fill="#A7B6C2" font-size="12" text-anchor="middle">cache + stats</text>
+<rect x="588" y="216" width="170" height="44" rx="8" fill="#161E27" stroke="#A7B6C2" stroke-width="2"/>
+<text x="673" y="242" fill="#F3F7F9" font-size="15" font-weight="600" text-anchor="middle">R2</text>
+<text x="673" y="261" fill="#A7B6C2" font-size="12" text-anchor="middle">evidence, consented</text>
+<rect x="320" y="292" width="438" height="60" rx="8" fill="#161E27" stroke="#A78BFA" stroke-width="2"/>
+<text x="539" y="318" fill="#F3F7F9" font-size="15" font-weight="600" text-anchor="middle">Embedded: turn's published catalog</text>
+<text x="539" y="337" fill="#A7B6C2" font-size="12" text-anchor="middle">198 products, 323 UPCs, per-state size matrix</text>
+<line x1="425" y1="292" x2="425" y2="222" stroke="#A78BFA" stroke-width="2.5" marker-end="url(#a3)"/>
+<rect x="824" y="132" width="344" height="52" rx="8" fill="#161E27" stroke="#A78BFA" stroke-width="2"/>
+<text x="996" y="158" fill="#F3F7F9" font-size="15" font-weight="600" text-anchor="middle">State track-and-trace</text>
+<text x="996" y="177" fill="#A7B6C2" font-size="12" text-anchor="middle">Retail ID short link (NY/CA)</text>
+<rect x="824" y="196" width="344" height="52" rx="8" fill="#161E27" stroke="#A78BFA" stroke-width="2"/>
+<text x="996" y="222" fill="#F3F7F9" font-size="15" font-weight="600" text-anchor="middle">California DCC</text>
+<text x="996" y="241" fill="#A7B6C2" font-size="12" text-anchor="middle">public licence search</text>
+<line x1="758" y1="158" x2="818" y2="158" stroke="#A78BFA" stroke-width="2.5" marker-end="url(#a3)"/>
+<line x1="758" y1="222" x2="818" y2="222" stroke="#A78BFA" stroke-width="2.5" marker-end="url(#a3)"/>
+<rect x="824" y="292" width="344" height="60" rx="8" fill="#1E2833" stroke="#F5A524" stroke-width="2"/>
+<text x="848" y="318" fill="#F5A524" font-size="14" font-weight="600">PRE-SCREEN ONLY</text>
+<text x="848" y="338" fill="#F3F7F9" font-size="13">Not affiliated with turn. Nothing is reported automatically.</text>
+<text x="72" y="400" fill="#A7B6C2" font-size="14">Test rows (header x-podcheck-test: 1) are flagged is_test=1 and excluded from every public number. Photos are discarded unless a user consents.</text>
+<text x="72" y="426" fill="#A7B6C2" font-size="14">ui.js binds to the same inputs as app.js and adds no logic, so the enhancement layer cannot change a verdict.</text>
 </svg>
